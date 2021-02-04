@@ -6,17 +6,26 @@ import os
 # jpgToPng.py .\Pictures .\new
 
 # grab first and second argument -> Use sys.argv
-# img_files = os.listdir(sys.argv[1])
-# new_files = sys.argv[2]
-img_files = os.listdir(r".\Pictures")
-new_files = r".\new"
+img_files = os.listdir(sys.argv[1])
+new_files = sys.argv[2]
+# img_files = os.listdir(r".\Pictures")
+# new_files = r".\new"
+
 # check if \new folder exists, if not, create the folder
-print(os.path.exists(new_files))
+if not os.path.exists(new_files): # -> learn how to create folder in python
+    os.mkdir(new_files)
 
 # loop through the pictures file
-# convert images to png
-# save to the new folder
+for img in img_files:
+    # print(img)
+    # convert images to png
+    _img = Image.open(".\Pictures"+ "\/" + str(img))
+    # save to the new folder
+    _img.save(".\/new\/" + str(img)[:-4] + ".png", "png")
 
-# print(os.name)
-print(os.getcwd())
+
+
+
+
+
 
