@@ -12,4 +12,14 @@ import os
 # convert images to png
 # save to the new folder
 
+# img_folder = sys.argv[1]
+# new_folder = sys.argv[2]
 
+# print(dir(os))
+print()
+
+# print(os.name)
+print(os.getcwd())
+
+files = os.listdir(".\Pictures")
+print(files)
