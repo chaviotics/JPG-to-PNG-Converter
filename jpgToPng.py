@@ -19,9 +19,12 @@ if not os.path.exists(new_files): # -> learn how to create folder in python
 for img in img_files:
     # print(img)
     # convert images to png
-    _img = Image.open(".\Pictures"+ "\/" + str(img))
+    _img = Image.open(".\Pictures"+ "\/" + str(img)) # .open(f'{img_files}{new_files}')
+
+    # clean_name = os.path.splitext(img)[0]
     # save to the new folder
-    _img.save(".\/new\/" + str(img)[:-4] + ".png", "png")
+
+    _img.save(".\/new\/" + str(img)[:-4] + ".png", "png") # .save(f'{new_files}{str(img)[:-4]}','png')
 
 
 
